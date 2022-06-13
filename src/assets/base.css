@@ -4,12 +4,6 @@
 
 @layer base {
     h2 {
-        @apply text-2xl font-semibold;
-    }
-}
-
-@layer components {
-    .section {
-        @apply p-2 md:p-4;
+        @apply text-2xl font-semibold mb-4;
     }
 }

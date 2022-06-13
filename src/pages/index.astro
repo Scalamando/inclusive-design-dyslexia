@@ -9,16 +9,16 @@ import Examples from '../components/Examples.astro';
 
 <Layout title="Dyslexie">
     <Header />
-    <div class="grid grid-cols-1 md:grid-cols-[200px_minmax(0,60ch)] gap-8 py-4 place-content-center">
-        <aside class="p-4 hidden md:block">
-            <ul class="flex flex-col gap-4">
-                <li>Zielgruppe</li>
-                <li>Designprozess</li>
-                <li>Guidelines</li>
-                <li>Beispielprojekte</li>
+    <div class="py-12 px-2 md:px-4 mx-auto flex max-w-full w-max items-stretch">
+        <aside class="pr-12 hidden lg:block right-full">
+            <ul class="sticky flex flex-col gap-4 top-8">
+                <li><a href="#user-group">Zielgruppe</a></li>
+                <li><a href="#design-process">Designprozess</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+                <li><a href="#examples">Beispielprojekte</a></li>
             </ul>
         </aside>
-        <main class="flex flex-col gap-12">
+        <main class="flex flex-col gap-8 max-w-[60ch] h-[3000px]">
             <UserGroup />
             <DesignProcess />
             <Guidelindes />
