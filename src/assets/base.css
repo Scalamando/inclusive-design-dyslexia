@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h2 {
+        @apply text-2xl font-semibold;
+    }
+}
+
+@layer components {
+    .section {
+        @apply p-2 md:p-4;
+    }
+}
