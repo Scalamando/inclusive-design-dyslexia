@@ -21,54 +21,154 @@
           v-for="tab in Tabs"
           :key="tab"
           class="mr-1 px-2 text-xl focus:bg-slate-700 focus:text-white focus:outline-none focus:border-none"
-          v-on:click="currentTab = tab.component"
+          v-on:click="currentTab = tab.Guidelines"
           v-bind:id="tab.name"
         >
           {{ tab.name }}
         </button>
       </nav>
 
-      <div class="bg-slate-700 py-6">
-        <component :is="currentTab"></component>
+      <div class="bg-slate-700 py-6 w-full">
+        <Guideline
+          v-for="Guide in currentTab"
+          :key="Guide"
+          :inst="Guide.inst"
+          :title="Guide.title"
+        ></Guideline>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import GuideText from "./Guidelines/GuideText.vue";
-import GuideColor from "./Guidelines/GuideColor.vue";
-import GuideLayout from "./Guidelines/GuideLayout.vue";
-import GuideHeaders from "./Guidelines/GuideHeaders.vue";
-import GuideTools from "./Guidelines/GuideTools.vue";
-import GuideWritingStyle from "./Guidelines/GuideWritingStyle.vue";
+import Guideline from "./Guideline.vue";
 
 export default {
   data() {
     return {
-      currentTab: "GuideText",
       Tabs: [
-        { name: "Text", component: GuideText },
-        { name: "Farbe", component: GuideColor },
-        { name: "Anordnung", component: GuideLayout },
-        { name: "Überschriften", component: GuideHeaders },
-        { name: "Schreibstil", component: GuideWritingStyle },
-        { name: "Werkzeuge", component: GuideTools },
+        {
+          name: "Text",
+          Guidelines: [
+            {
+              title: "Schriftgröße",
+              inst: "Nutze eine Schriftgröße von 16 - 19 px.",
+            },
+            {
+              title: "Schriftart",
+              inst: "Verwende eine Schriftart ohne Serifen (bspw. Sans-Serif)",
+            },
+            {
+              title: "Zeichenabstand",
+              inst: "Verwende einen Zeichenabstand von 35%",
+            },
+            {
+              title: "Wortabstand",
+              inst: "Der Abstand zwischen Wörtern sollte mind. 3.5 mal Größer sein als der Zeichenabstand",
+            },
+            {
+              title: "Zeilenabstand",
+              inst: "Nutze einen Zeilenabstand von 150% der Schriftgröße",
+            },
+            {
+              title: "Zeilenlänge",
+              inst: "Limitierte die Zeilenlänge auf 60 - 70 Zeichen",
+            },
+            {
+              title: "Groß- / und Kleinschreibung",
+              inst: "Verzichte auf Text in ausschließlich Groß- / Kleinbuchstaben",
+            },
+          ],
+        },
+        {
+          name: "Farbe",
+          Guidelines: [
+            {
+              title: "Einfarbige Hintergründe",
+              inst: "Nutze einfarbige Hintergründe ohne Muster oder Bilder",
+            },
+            {
+              title: "Auf Weiß verzichten",
+              inst: "Verzichte auf die Farbe Weiß als Hintergrund. Nutze bspw. stattdessen eine helle Pastell-Farbe.",
+            },
+          ],
+        },
+        {
+          name: "Anordnung",
+          Guidelines: [
+            {
+              title: "Textausrichtung",
+              inst: "Linksbündigen Text verwenden",
+            },
+            {
+              title: "Textspalten",
+              inst: "Verzichte auf mehrere Textspalten",
+            },
+            {
+              title: "Überschriften",
+              inst: "Trenne lange Texte mit Überschriften für Absätze. Verwende zusätzlich ein Inhaltsverzeichnis",
+            },
+          ],
+        },
+        {
+          name: "Überschriften",
+          Guidelines: [
+            {
+              title: "Schriftgröße",
+              inst: "Verwende eine Schriftgröße die mind. 20% größer als der normale Text ist.",
+            },
+            {
+              title: "Abstände",
+              inst: "Nutze zusätzliche Abstände um Überschriften herum.",
+            },
+          ],
+        },
+        {
+          name: "Schreibstil",
+          Guidelines: [
+            {
+              title: "Komplexität",
+              inst: "Verwende kurze und simple Sätze.",
+            },
+            {
+              title: "Stil",
+              inst: "Schreibe ein einem direkten und aktiven Stil.",
+            },
+            {
+              title: "Verneinungen",
+              inst: "Verzichte auf doppelte Verneinungen",
+            },
+            {
+              title: "Stichpunkte und Nummerierungen",
+              inst: "Nutze Stichpunkte und Nummerierungen wenn möglich.",
+            },
+          ],
+        },
+        {
+          name: "Werkzeuge",
+          Guidelines: [
+            {
+              title: "Einstellungsmöglichkeiten",
+              inst: "Lasse Nutzende die Schriftgröße, Zeilenabstand etc. selbst einstellen.",
+            },
+            {
+              title: "Vorlesefunktion",
+              inst: "Implementiere eine Vorlesefunktion",
+            },
+          ],
+        },
       ],
+      currentTab: [],
     };
   },
   components: {
-    GuideText,
-    GuideColor,
-    GuideLayout,
-    GuideHeaders,
-    GuideTools,
-    GuideWritingStyle,
+    Guideline,
   },
   mounted() {
     document.getElementById("Text").focus({
       preventScroll: true,
     });
+    this.currentTab = this.Tabs[0].Guidelines;
   },
 };
 </script>
