@@ -1,13 +1,17 @@
 <template>
   <div class="w-full flex justify-center">
-    <div class="border w-4/5 my-3 flex justify bg-slate-100">
-      <div class="w-2/5 border pl-1">
-        <p class="text-xl font-semibold">{{ title }}</p>
-        <p>{{ inst }}</p>
+    <div class="w-11/12 my-3 bg-slate-100">
+      <div class="w-full pl-1 py-1">
+        <p class="text-xl font-semibold guidelines">{{ title }}</p>
+        <p class="guidelines">{{ inst }}</p>
       </div>
-      <div class="border w-3/5 flex justify">
-        <div id="do" class="border w-1/2 m-2 h-12">do</div>
-        <div id="dont" class="border w-1/2 m-2">dont</div>
+      <div :class="containerClass">
+        <div id="do" :class="doStyle">
+          <div>{{ doo }}</div>
+        </div>
+        <div id="dont" :class="dontStyle">
+          <div class="">{{ dont }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -16,11 +20,22 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      containerClass: "w-full flex",
+    };
   },
   props: {
     title: String,
     inst: String,
+    doo: String,
+    dont: String,
+    doStyle: String,
+    dontStyle: String,
+  },
+  mounted() {
+    if (this.title == "Zeilenlänge") {
+      this.containerClass = "w-full";
+    }
   },
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
   <div>
     <h2 id="guidelines">Guidelines</h2>
-    <p class="mb-3">
+    <p class="mb-3 guidelines">
       Diese Regeln berücksichtigen die Probleme von Menschen mit Legasthenie.
       Sie vereinfachen das Lesen u. Verstehen von geschriebenen Inhalten für
       alle Leser*innen.
     </p>
-    <p class="mb-3">
+    <p class="mb-3 guidelines">
       Verwenden Sie zusätzlich zu diesen Regeln die Richtlinen der
       <a
         class="underline"
@@ -34,6 +34,10 @@
           :key="Guide"
           :inst="Guide.inst"
           :title="Guide.title"
+          :doo="Guide.doo"
+          :dont="Guide.dont"
+          :doStyle="Guide.doStyle"
+          :dontStyle="Guide.dontStyle"
         ></Guideline>
       </div>
     </div>
@@ -52,27 +56,51 @@ export default {
           Guidelines: [
             {
               title: "Schriftgröße",
-              inst: "Nutze eine Schriftgröße von 16 - 19 px.",
+              inst: "Nutze eine Schriftgröße von 16 - 20 px.",
+              doo: "Schriftgröße von 20px",
+              dont: "Schriftgröße von 12px",
+              doStyle:
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+              dontStyle:
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center text-xs",
             },
             {
               title: "Schriftart",
               inst: "Verwende eine Schriftart ohne Serifen (bspw. Sans-Serif)",
+              doo: "Schrift ohne Serifen",
+              dont: "Schrift mit Serifen",
+              doStyle:
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+              dontStyle:
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center font-serif",
             },
             {
               title: "Zeichenabstand",
-              inst: "Verwende einen Zeichenabstand von 35%",
+              inst: "Verwende einen Zeichenabstand von 35% der Schriftgröße.",
             },
             {
               title: "Wortabstand",
-              inst: "Der Abstand zwischen Wörtern sollte mind. 3.5 mal Größer sein als der Zeichenabstand",
+              inst: "Der Abstand zwischen Wörtern sollte mind. 3.5 mal Größer sein als der Zeichenabstand.",
             },
             {
               title: "Zeilenabstand",
               inst: "Nutze einen Zeilenabstand von 150% der Schriftgröße",
+              doo: "Der Zeilenabstand in diesem Text beträgt 150% der Schriftgröße. ",
+              dont: "Der Zeilenabstand in diesem Text beträgt 100% der Schriftgröße.",
+              doStyle:
+                "max-w-[60ch] leading-normal border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+              dontStyle:
+                "max-w-[60ch] leading-none border w-1/2 m-2 p-2 flex items-center jusitfy-center ",
             },
             {
               title: "Zeilenlänge",
               inst: "Limitierte die Zeilenlänge auf 60 - 70 Zeichen",
+              doo: "Die Zeilen in diesem Text haben eine maximale Länge von 60 Zeichen, und haben somit die korrekte länge.",
+              dont: "Die Zeilen in diesem Text haben eine maximale Länge von 80 Zeichen, und haben somit eine falsche Länge.",
+              doStyle:
+                "leading-normal max-w-[60ch] border w-auto m-2 p-2 flex items-center jusitfy-center ",
+              dontStyle:
+                "leading-normal max-w-[80ch] border w-auto m-2 p-2 flex items-center jusitfy-center ",
             },
             {
               title: "Groß- / und Kleinschreibung",

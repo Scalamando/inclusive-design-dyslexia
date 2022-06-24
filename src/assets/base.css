@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-    h2 {
-        @apply text-2xl font-semibold mb-4;
-    }
+  h2 {
+    @apply text-2xl font-semibold mb-4;
+  }
+}
+@layer components {
+  .guidelines {
+    @apply max-w-[60ch] leading-normal;
+  }
 }
