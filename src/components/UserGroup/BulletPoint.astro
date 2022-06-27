@@ -18,3 +18,13 @@ const { mark, title } = Astro.props as Props;
         </p>
     </div>
 </div>
+
+<style is:global>
+    details [data-bulletpoint] {
+        @apply opacity-0 transition translate-y-1 duration-500;
+    }
+
+    details[open] [data-bulletpoint] {
+        @apply opacity-100 translate-y-0;
+    }
+</style>

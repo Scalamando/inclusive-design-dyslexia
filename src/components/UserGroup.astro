@@ -86,12 +86,4 @@ import BulletPoint from "./UserGroup/BulletPoint.astro";
     details[open] .chevron::after {
         @apply rotate-180;
     }
-
-    details :global(div[data-bulletpoint]) {
-        @apply opacity-0 transition translate-y-1 duration-500;
-    }
-
-    details[open] :global(div[data-bulletpoint]) {
-        @apply opacity-100 translate-y-0;
-    }
 </style>
