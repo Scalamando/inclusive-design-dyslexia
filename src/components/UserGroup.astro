@@ -1,7 +1,87 @@
 ---
 ---
 
-<div>
-    <h2 id="user-group">Zielgruppe</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quia molestiae officiis non maxime omnis ducimus. Impedit aliquid enim et voluptatum, repellat, earum aut modi accusamus sapiente blanditiis ut voluptatem.</p>
-</div>
+<section id="user-group-section">
+    <h2 id="user-group" class="mb-12">Die Zielgruppe</h2>
+    <div class="grid grid-cols-[0.4fr_1.6fr] place-items-center gap-8 mb-8">
+        <img src="src/assets/icons/people.svg" alt="">
+        <div>
+            <h3 class="text-xl font-semibold mb-1">4-20&percnt; der Bevölkerung</h3>
+            <p>Dyslexie ist in der Bevölkerung weit verbreitet, wobei hohe Dunkelziffern vermutet werden. Die
+                Ausprägungen der Dyslexie sind hierbei extrem vielfältig. Es gibt kein einheitliches Symptombild.</p>
+        </div>
+        <img src="src/assets/icons/pills.svg" alt="">
+        <div>
+            <h3 class="text-xl font-semibold mb-1">Nicht &bdquo;heilbar&ldquo;</h3>
+            <p>Personen mit Dyslexie wachsen aus den Symptomen nicht heraus. Die Betroffenen erarbeiten jedoch häufig
+                kreative Bewältigungsstrategien. Außerdem können durch kleine Anpassungen im alltäglichen Umfeld
+                Erleichertungen für die Betroffenen geschaffen werden. </p>
+        </div>
+        <img src="src/assets/icons/brain.svg" alt="">
+        <div>
+            <h3 class="text-xl font-semibold mb-1">Voll intelligent</h3>
+            <p>Dyslexie wird nicht durch die Intelligenz beeinflusst. Die Symptome treten über alle verschiedenen
+                Intelligenzniveaus auf. Dyslexie allein hindert keine betroffene Person an dem Erreichen akademischer
+                oder beruflicher Ziele. </p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-2">
+        <details class="bg-slate-200 p-2 rounded-md">
+            <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">💪 Stärken</summary>
+            <div class="pt-2 text-sm">
+                <h4 class="font-semibold text-base before:content-['1️⃣_']">Kreativität</h4>
+                Personen mit Dyslexie sind häufig kreativ, da sie durch die Einschränkungen in ihrem Alltag ‘outside of
+                the box’ denken.
+            </div>
+            <div class="pt-4 text-sm delay-100">
+                <h4 class="font-semibold text-base before:content-['2️⃣_']">Lernen</h4>
+                Betroffene müssen viel mehr Anstrengung in den Lese- und Schreiblernprozess investieren. Dadurch
+                entwickeln sie ein besseres Durchhaltevermögen und kreative Strategien.
+            </div>
+            <div class="pt-4 text-sm delay-200">
+                <h4 class="font-semibold text-base before:content-['3️⃣_']">Problemlösen</h4>
+                Durch die von Sprache geprägte Welt müssen Personen mit Dyslexie sehr früh Bewältigungsmechanismen
+                entwickeln. Hierdurch wird der Problemlöseprozess trainiert.
+            </div>
+        </details>
+        <details class="bg-slate-200 p-2 rounded-md">
+            <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">⛔ Exklusionfaktoren
+            </summary>
+            <div class="pt-2 text-sm">
+                <h4 class="font-semibold text-base before:content-['1️⃣_']">Allgemein</h4>
+                Grundsätzlich haben Personen mit Dyslexie Probleme damit, die Bedeutung geschriebener Zeichen zu erfassen. Es fällt Betroffenen schwer, den Sinn von Wörtern und Sätzen zu erkennen.
+            </div>
+            <div class="pt-4 text-sm delay-100">
+                <h4 class="font-semibold text-base before:content-['2️⃣_']">Lesen</h4>
+                Beim Lesen sind die häufigsten Probleme eine niedrige Lesegeschwindigkeit und das Verlieren der Zeile im Text. Hinzu kommt, dass Wörter häufig vertauscht, ausgesetzt oder hinzugefügt werden.
+            </div>
+            <div class="pt-4 text-sm delay-200">
+                <h4 class="font-semibold text-base before:content-['3️⃣_']">Schreiben</h4>
+                Beim Schreiben prägt sich Dyslexie durch eine hohe Fehleranzahl in Rechtschreibung und Grammatik aus. Insbesondere Buchstabenverdrehungen, Reihenfolgenfehler und Auslassungen spielen eine Rolle. Zudem haben Betroffene häufig unleserliche Handschriften.
+            </div>
+        </details>
+    </div>
+</section>
+
+<style>
+    .chevron {
+        @apply relative;
+    }
+
+    .chevron::after {
+        content: url(src/assets/icons/chevron.svg);
+        @apply absolute right-4 inset-y-4 invert scale-125 transition-transform;
+    }
+
+    details[open] .chevron::after {
+        @apply rotate-180;
+    }
+
+    details div {
+        @apply opacity-0 transition translate-y-1 duration-500;
+    }
+
+    details[open] div {
+        @apply opacity-100 translate-y-0;
+    }
+</style>
