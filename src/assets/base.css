@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-    h2 {
-        @apply text-2xl font-semibold mb-4;
-    }
+	h2 {
+		@apply text-2xl font-semibold mb-4;
+	}
+}
+
+@layer components {
+	.aside-link {
+		background: linear-gradient(
+			to right,
+			theme(colors.dark.DEFAULT),
+			theme(colors.dark.DEFAULT)
+		);
+        transition: background-size 0.5s ease, transform 0.5s ease;
+		@apply relative bg-[length:0_3px] bg-no-repeat bg-right-bottom;
+	}
 }
