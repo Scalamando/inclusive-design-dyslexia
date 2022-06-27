@@ -30,12 +30,13 @@ import Examples from '../components/Examples.astro';
     <script>
         const [userSection, designSection, guidelineSection, examplesSection] = document.querySelectorAll('main section');
         const navEl = document.querySelector('aside nav');
+        navEl.setAttribute('data-active', 'user-group');
 
         const observer = new IntersectionObserver((sections) => {
             for (const sectionElement of sections) {
                 if (sectionElement.isIntersecting) {
                     const sectionId = sectionElement.target.id.replace("-section", "");
-                    navEl.setAttribute('active', sectionId);
+                    navEl.setAttribute('data-active', sectionId);
                 }
             }
         }, { rootMargin: "-20% 0px -75% 0px" });
@@ -52,19 +53,19 @@ import Examples from '../components/Examples.astro';
         @apply inline-block pb-0.5;
     }
 
-    nav[active="user-group"] a[href="#user-group"] {
+    nav[data-active="user-group"] a[href="#user-group"] {
         @apply font-semibold bg-[length:100%_3px] -translate-x-4;
     }
 
-    nav[active="design-process"] a[href="#design-process"] {
+    nav[data-active="design-process"] a[href="#design-process"] {
         @apply font-semibold bg-[length:100%_3px] -translate-x-4;
     }
 
-    nav[active="guidelines"] a[href="#guidelines"] {
+    nav[data-active="guidelines"] a[href="#guidelines"] {
         @apply font-semibold bg-[length:100%_3px] -translate-x-4;
     }
 
-    nav[active="examples"] a[href="#examples"] {
+    nav[data-active="examples"] a[href="#examples"] {
         @apply font-semibold bg-[length:100%_3px] -translate-x-4;
     }
 </style>
