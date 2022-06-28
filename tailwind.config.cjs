@@ -12,6 +12,9 @@ module.exports = {
 				"accent-red": "#ef9c9d",
 				"accent-orange": "#f2b19b",
 			},
+            fontFamily: {
+                "title": "Merriweather Sans, sans-serif"
+            }
 		},
 	},
 	plugins: [],

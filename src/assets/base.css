@@ -4,8 +4,20 @@
 
 @layer base {
 	h2 {
-		@apply text-2xl font-semibold mb-4;
+		@apply text-3xl font-bold mb-4;
 	}
+
+    h3 {
+        @apply mb-2 font-bold;
+    }
+
+    strong {
+        @apply font-semibold;
+    }
+
+    h1,h2,h3,h4 {
+        @apply font-title;
+    }
 }
 
 @layer components {
