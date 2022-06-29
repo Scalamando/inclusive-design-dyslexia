@@ -11,4 +11,7 @@
   .guidelines {
     @apply max-w-[60ch] leading-normal;
   }
+  .doDont {
+    @apply max-w-[60ch] border border-4 m-2 p-2 leading-normal w-1/2 place-content-center flex items-center rounded-md;
+  }
 }
