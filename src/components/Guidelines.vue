@@ -20,7 +20,7 @@
         <button
           v-for="tab in Tabs"
           :key="tab"
-          class="mr-1 px-2 text-xl focus:bg-slate-700 focus:text-white focus:outline-none focus:border-none"
+          class="mr-1 px-2 text-xl focus:bg-dark focus:text-white focus:outline-none focus:border-none"
           v-on:click="currentTab = tab.Guidelines"
           v-bind:id="tab.name"
         >
@@ -28,7 +28,7 @@
         </button>
       </nav>
 
-      <div class="bg-slate-700 py-6 w-full">
+      <div class="bg-slate-200 py-6 w-full">
         <Guideline
           v-for="Guide in currentTab"
           :key="Guide"
@@ -60,9 +60,9 @@ export default {
               doo: "Schriftgröße von 20px",
               dont: "Schriftgröße von 12px",
               doStyle:
-                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+                " max-w-[60ch] place-content-center border border-dark w-1/2 m-2 p-2 flex items-center jusitfy-center",
               dontStyle:
-                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center text-xs",
+                " max-w-[60ch] place-content-center border border-dark w-1/2 m-2 p-2 flex items-center jusitfy-center text-xs",
             },
             {
               title: "Schriftart",
@@ -70,9 +70,9 @@ export default {
               doo: "Schrift ohne Serifen",
               dont: "Schrift mit Serifen",
               doStyle:
-                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center border-dark",
               dontStyle:
-                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center font-serif",
+                " max-w-[60ch] place-content-center border w-1/2 m-2 p-2 flex items-center jusitfy-center font-serif border-dark",
             },
             {
               title: "Zeichenabstand",
@@ -88,9 +88,9 @@ export default {
               doo: "Der Zeilenabstand in diesem Text beträgt 150% der Schriftgröße. ",
               dont: "Der Zeilenabstand in diesem Text beträgt 100% der Schriftgröße.",
               doStyle:
-                "max-w-[60ch] leading-normal border w-1/2 m-2 p-2 flex items-center jusitfy-center",
+                "max-w-[60ch] leading-normal border w-1/2 m-2 p-2 flex items-center jusitfy-center border-dark",
               dontStyle:
-                "max-w-[60ch] leading-none border w-1/2 m-2 p-2 flex items-center jusitfy-center ",
+                "max-w-[60ch] leading-none border w-1/2 m-2 p-2 flex items-center jusitfy-center border-dark ",
             },
             {
               title: "Zeilenlänge",
@@ -98,9 +98,9 @@ export default {
               doo: "Die Zeilen in diesem Text haben eine maximale Länge von 60 Zeichen, und haben somit die korrekte länge.",
               dont: "Die Zeilen in diesem Text haben eine maximale Länge von 80 Zeichen, und haben somit eine falsche Länge.",
               doStyle:
-                "leading-normal max-w-[60ch] border w-auto m-2 p-2 flex items-center jusitfy-center ",
+                "leading-normal max-w-[60ch] border w-auto m-2 p-2 flex items-center jusitfy-center border-dark ",
               dontStyle:
-                "leading-normal max-w-[80ch] border w-auto m-2 p-2 flex items-center jusitfy-center ",
+                "leading-normal max-w-[80ch] border w-auto m-2 p-2 flex items-center jusitfy-center border-dark ",
             },
             {
               title: "Groß- / und Kleinschreibung",
@@ -113,7 +113,13 @@ export default {
           Guidelines: [
             {
               title: "Einfarbige Hintergründe",
-              inst: "Nutze einfarbige Hintergründe ohne Muster oder Bilder",
+              inst: "Nutze einfarbige Hintergründe ohne Muster oder Bilder.",
+              doo: "Dies ist ein einfarbiger Hintergrund.",
+              dont: "Dies ist ein mehrfarbiger Hintergrund mit Muster.",
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center place-content-center border-dark bg-zinc-50",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center  place-content-centerborder-dark bg-gradient-to-r from-accent-red via-slate-600 to-blue-500",
             },
             {
               title: "Auf Weiß verzichten",
@@ -127,10 +133,22 @@ export default {
             {
               title: "Textausrichtung",
               inst: "Linksbündigen Text verwenden",
+              doo: "Dieser Text ist Linksbündig angeordnert.  Dies ist gut für die Lesbarkeit! ",
+              dont: "Dieser Text ist Zentriert. \n Dies verschlechtert den Lesefluss und ist ist schlecht für die Lesbarkeit! ",
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex place-content-center border-dark text-center",
             },
             {
               title: "Textspalten",
               inst: "Verzichte auf mehrere Textspalten",
+              doo: "Dieser Text befindet sich in einer Textspalte! Das ist gut für den Lesefluss und macht die Seite übersichtlicher!",
+              dont: "Dieser Text ist Zentriert. \n Dies verschlechtert den Lesefluss und ist ist schlecht für die Lesbarkeit! ",
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark columns-2",
             },
             {
               title: "Überschriften",
@@ -157,18 +175,47 @@ export default {
             {
               title: "Komplexität",
               inst: "Verwende kurze und simple Sätze.",
+              doo: "Dieser Text hat einfache Sätze. Sie sind kurz und simpel. Dadurch ist der Text einfacher zu verstehen. ",
+              dont: "Innerhalb dieses Textes sind schwierigere Sätze enhalten, da diese länger und komplex strukutiert sind, worduch dieser Text schwieriger zu verstehen ist. ",
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark ",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark",
             },
             {
               title: "Stil",
-              inst: "Schreibe ein einem direkten und aktiven Stil.",
+              inst: "Schreibe ein einem direkten und aktivem Stil.",
+              doo: '"Jonas versteht den Text."',
+              dont: '"Der Text wird von Jonas verstanden."',
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center place-content-center border-dark ",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center  place-content-center border-dark",
             },
             {
               title: "Verneinungen",
               inst: "Verzichte auf doppelte Verneinungen",
+              doo: '"Ich habe alles Verstanden!"',
+              dont: '"Ich habe nichts nicht verstanden!"',
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center place-content-center border-dark ",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex items-center jusitfy-center  place-content-center border-dark",
             },
             {
               title: "Stichpunkte und Nummerierungen",
               inst: "Nutze Stichpunkte und Nummerierungen wenn möglich.",
+              doo: {
+                header: "Stichpunkte und Nummerierungen!",
+                one: "Bringen Struktur in den Text",
+                two: "Verbessern die Verständlichkeit",
+                three: "Machen vieles übersichtlicher",
+              },
+              dont: "Stichpunkte und Nummerierungen bringen Struktur in einen Text. Ausserdem verbessern sie die Versätndlichkeit. Zusätzlich werden durch Stichpunkte und Nummerierungen viele Texte übersichtlicher",
+              doStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex border-dark list-disc",
+              dontStyle:
+                " leading-normal max-w-[60ch] border w-1/2 m-2 p-2 flex place-content-center border-dark",
             },
           ],
         },
@@ -181,7 +228,7 @@ export default {
             },
             {
               title: "Vorlesefunktion",
-              inst: "Implementiere eine Vorlesefunktion",
+              inst: "Implementiere eine Vorlesefunktion.",
             },
           ],
         },
