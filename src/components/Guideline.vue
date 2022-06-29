@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex justify-center">
     <div class="w-11/12 my-3 bg-slate-200 border-2 border-dark rounded-md">
-      <div class="w-full pl-1 py-1">
+      <div class="w-full pl-1 py-1 mx-2">
         <p class="text-xl font-semibold guidelines">{{ title }}</p>
         <p class="guidelines">{{ inst }}</p>
       </div>
