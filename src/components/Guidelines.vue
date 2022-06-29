@@ -64,7 +64,7 @@ export default {
             },
             {
               title: "Schriftart",
-              inst: "Verwende eine Schriftart ohne Serifen (bspw. Sans-Serif)",
+              inst: "Verwende eine Schriftart ohne Serifen (bspw. Sans-Serif).",
               doo: "Schrift ohne Serifen",
               dont: "Schrift mit Serifen",
               doStyle: "  doDont border-accent-green",
@@ -76,7 +76,7 @@ export default {
             },
             {
               title: "Wortabstand",
-              inst: "Der Abstand zwischen Wörtern sollte mind. 3.5 mal Größer sein als der Zeichenabstand.",
+              inst: "Der Abstand zwischen Wörtern sollte mind. 3,5-mal größer sein als der Zeichenabstand.",
             },
             {
               title: "Zeilenabstand",
@@ -89,7 +89,7 @@ export default {
             {
               title: "Zeilenlänge",
               inst: "Limitierte die Zeilenlänge auf 60 - 70 Zeichen",
-              doo: "Die Zeilen in diesem Text haben eine maximale Länge von 60 Zeichen, und haben somit die korrekte länge.",
+              doo: "Die Zeilen in diesem Text haben eine maximale Länge von 60 Zeichen, und haben somit die korrekte Länge.",
               dont: "Die Zeilen in diesem Text haben eine maximale Länge von 80 Zeichen, und haben somit eine falsche Länge.",
               doStyle: "doDont w-auto border-accent-green ",
               dontStyle: "doDont max-w-[80ch] w-auto border-accent-red ",
@@ -124,8 +124,8 @@ export default {
             {
               title: "Textausrichtung",
               inst: "Linksbündigen Text verwenden",
-              doo: "Dieser Text ist Linksbündig angeordnert.  Dies ist gut für die Lesbarkeit! ",
-              dont: "Dieser Text ist Zentriert. \n Dies verschlechtert den Lesefluss und ist ist schlecht für die Lesbarkeit! ",
+              doo: "Dieser Text ist linksbündig angeordnet.  Dies ist gut für die Lesbarkeit! ",
+              dont: "Dieser Text ist zentriert. \n Dies verschlechtert den Lesefluss und ist schlecht für die Lesbarkeit! ",
               doStyle: " doDont border-accent-green ",
               dontStyle: " doDont border-accent-red  text-center",
             },
@@ -133,13 +133,13 @@ export default {
               title: "Textspalten",
               inst: "Verzichte auf mehrere Textspalten",
               doo: "Dieser Text befindet sich in einer Textspalte! Das ist gut für den Lesefluss und macht die Seite übersichtlicher!",
-              dont: "Dieser Text ist Zentriert. \n Dies verschlechtert den Lesefluss und ist ist schlecht für die Lesbarkeit! ",
+              dont: "Dieser Text ist in mehreren Textspalten angeordnet. Das ist schlecht für den Lesefluss und macht die Seite unübersichtlicher!",
               doStyle: " doDont border-accent-green ",
               dontStyle: " doDont border-accent-red items-start columns-2",
             },
             {
               title: "Überschriften",
-              inst: "Trenne lange Texte mit Überschriften für Absätze. Verwende zusätzlich ein Inhaltsverzeichnis",
+              inst: "Trenne lange Texte mit Überschriften für Absätze. Verwende zusätzlich ein Inhaltsverzeichnis.",
             },
           ],
         },
@@ -163,7 +163,7 @@ export default {
               title: "Komplexität",
               inst: "Verwende kurze und simple Sätze.",
               doo: "Dieser Text hat einfache Sätze. Sie sind kurz und simpel. Dadurch ist der Text einfacher zu verstehen. ",
-              dont: "Innerhalb dieses Textes sind schwierigere Sätze enhalten, da diese länger und komplex strukutiert sind, worduch dieser Text schwieriger zu verstehen ist. ",
+              dont: "Innerhalb dieses Textes sind schwierigere Sätze enthalten, da diese länger und komplex strukturiert sind, wodurch dieser Text schwieriger zu verstehen ist. ",
               doStyle: " doDont border-accent-green ",
               dontStyle: " doDont border-accent-red ",
             },
@@ -192,7 +192,7 @@ export default {
                 two: "Verbessern die Verständlichkeit",
                 three: "Machen vieles übersichtlicher",
               },
-              dont: "Stichpunkte und Nummerierungen bringen Struktur in einen Text. Ausserdem verbessern sie die Versätndlichkeit. Zusätzlich werden durch Stichpunkte und Nummerierungen viele Texte übersichtlicher",
+              dont: "Stichpunkte und Nummerierungen bringen Struktur in einen Text. Außerdem verbessern sie die Verständlichkeit. Zusätzlich werden durch Stichpunkte und Nummerierungen viele Texte übersichtlicher.",
               doStyle:
                 " doDont border-accent-green place-content-start list-disc",
               dontStyle: " doDont border-accent-red",
@@ -213,6 +213,7 @@ export default {
           ],
         },
       ],
+
       currentTab: [],
     };
   },
