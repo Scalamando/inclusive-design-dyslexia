@@ -1,24 +1,30 @@
 ---
 import BulletPoint from "./UserGroup/BulletPoint.astro";
+import peopleSvg from "../assets/icons/people.svg";
+import pillsSvg from "../assets/icons/pills.svg";
+import brainSvg from "../assets/icons/brain.svg";
 ---
 
 <section id="user-group-section">
     <h2 id="user-group" class="mb-12">Die Zielgruppe</h2>
     <div class="grid grid-cols-1 sm:grid-cols-[0.4fr_1.6fr] place-items-center gap-8 mb-8">
-        <img src="src/assets/icons/people.svg" alt="" class="w-1/2 sm:w-full">
+        <!-- TODO: Alt-tag -->
+        <img src={peopleSvg} alt="" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">4-20&percnt; der Bevölkerung</h3>
             <p>Dyslexie ist in der Bevölkerung weit verbreitet, wobei hohe Dunkelziffern vermutet werden. Die
                 Ausprägungen der Dyslexie sind hierbei extrem vielfältig. Es gibt kein einheitliches Symptombild.</p>
         </div>
-        <img src="src/assets/icons/pills.svg" alt="" class="w-1/2 sm:w-full">
+        <!-- TODO: Alt-tag -->
+        <img src={pillsSvg} alt="" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">Nicht &bdquo;heilbar&ldquo;</h3>
             <p>Personen mit Dyslexie wachsen aus den Symptomen nicht heraus. Die Betroffenen erarbeiten jedoch häufig
                 kreative Bewältigungs&shy;strategien. Außerdem können durch kleine Anpassungen im alltäglichen Umfeld
                 Erleichertungen für die Betroffenen geschaffen werden. </p>
         </div>
-        <img src="src/assets/icons/brain.svg" alt="" class="w-1/2 sm:w-full">
+        <!-- TODO: Alt-tag -->
+        <img src={brainSvg} alt="" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">Voll intelligent</h3>
             <p>Dyslexie wird nicht durch die Intelligenz beeinflusst. Die Symptome treten über alle verschiedenen
