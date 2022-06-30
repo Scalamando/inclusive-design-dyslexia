@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type{import('tailwindcss').Config}*/
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
@@ -17,6 +19,17 @@ module.exports = {
             }
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addComponents, theme }) {
+			addComponents({
+				".aside-link-active": {
+					fontWeight: theme("fontWeight.semibold"),
+					backgroundSize: "100% 3px",
+					transform: "translate(-1rem)",
+					opacity: 1,
+				},
+			});
+		}),
+	],
 };
 

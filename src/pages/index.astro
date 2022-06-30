@@ -31,10 +31,11 @@ import FurtherReading from '../components/FurtherReading.astro';
         </main>
     </div>
     <script>
-        const [userSection, designSection, guidelineSection, examplesSection, readingSection] = document.querySelectorAll('main section');
+        const sections = document.querySelectorAll('main section');
         const navEl = document.querySelector('aside nav');
         navEl.setAttribute('data-active', 'user-group');
 
+        // Emphasize the most prominent visible section in the aside navbar
         const observer = new IntersectionObserver((sections) => {
             for (const sectionElement of sections) {
                 if (sectionElement.isIntersecting) {
@@ -42,13 +43,11 @@ import FurtherReading from '../components/FurtherReading.astro';
                     navEl.setAttribute('data-active', sectionId);
                 }
             }
-        }, { rootMargin: "-20% 0px -75% 0px" });
+        }, { rootMargin: "-20% 0px -75% 0px" }); // Use the upper part of the browsers viewport
 
-        observer.observe(userSection);
-        observer.observe(designSection);
-        observer.observe(guidelineSection);
-        observer.observe(examplesSection);
-        observer.observe(readingSection);
+        for (const section of sections) {
+            observer.observe(section);
+        }
     </script>
 </Layout>
 
@@ -61,23 +60,30 @@ import FurtherReading from '../components/FurtherReading.astro';
         @apply opacity-80;
     }
 
+    /*
+        Apply the active style based on the nav's `data-active` attribute.
+        Look at lines 39-46 for further context.
+
+        See `tailwind.config.cjs` for the `aside-link-active` class.
+    */
+
     nav[data-active="user-group"] a[href="#user-group"] {
-        @apply font-semibold bg-[length:100%_3px] -translate-x-4 opacity-100;
+        @apply aside-link-active;
     }
 
     nav[data-active="design-process"] a[href="#design-process"] {
-        @apply font-semibold bg-[length:100%_3px] -translate-x-4 opacity-100;
+        @apply aside-link-active;
     }
 
     nav[data-active="guidelines"] a[href="#guidelines"] {
-        @apply font-semibold bg-[length:100%_3px] -translate-x-4 opacity-100;
+        @apply aside-link-active;
     }
 
     nav[data-active="examples"] a[href="#examples"] {
-        @apply font-semibold bg-[length:100%_3px] -translate-x-4 opacity-100;
+        @apply aside-link-active;
     }
 
     nav[data-active="further-reading"] a[href="#further-reading"] {
-        @apply font-semibold bg-[length:100%_3px] -translate-x-4 opacity-100;
+        @apply aside-link-active;
     }
 </style>
