@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon'
+
+export interface Props {
+    mark: number;
+    title: string;
+}
+
+const { mark, title } = Astro.props as Props;
+---
+
+<div data-bulletpoint class="grid grid-cols-[auto_1fr] gap-1.5 delay" style={`transition-delay: ${mark-1}00ms`}>
+    <Icon name={`emojione-v1:keycap-${mark}`} size="22" class="mt-1" />
+    <div>
+        <h4 class="font-semibold">{title}</h4>
+        <p class="text-sm">
+            <slot></slot>
+        </p>
+    </div>
+</div>
+
+<style is:global>
+    details [data-bulletpoint] {
+        @apply opacity-0 transition translate-y-1 duration-500;
+    }
+
+    details[open] [data-bulletpoint] {
+        @apply opacity-100 translate-y-0;
+    }
+</style>
