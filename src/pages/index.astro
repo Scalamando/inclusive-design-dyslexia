@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import UserGroup from '../components/UserGroup.astro';
 import DesignProcess from '../components/DesignProcess.astro';
-import Guidelindes from '../components/Guidelindes.astro';
 import Examples from '../components/Examples.astro';
 import FurtherReading from '../components/FurtherReading.astro';
+import Guidelines from '../components/Guidelines.vue'
 ---
 
 <Layout title="Dyslexie">
@@ -25,7 +25,8 @@ import FurtherReading from '../components/FurtherReading.astro';
         <main class="flex flex-col gap-8 max-w-[60ch]">
             <UserGroup />
             <DesignProcess />
-            <Guidelindes />
+            <!--<Guidelindes client:load />-->
+            <Guidelines client:load/>
             <Examples />
             <FurtherReading />
         </main>

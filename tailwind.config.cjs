@@ -13,6 +13,7 @@ module.exports = {
 				light: "#f4e8df",
 				"accent-red": "#ef9c9d",
 				"accent-orange": "#f2b19b",
+                "accent-green": "#87D378",
 			},
 			fontFamily: {
 				title: "Merriweather Sans, sans-serif",
@@ -35,4 +36,3 @@ module.exports = {
 		}),
 	],
 };
-
