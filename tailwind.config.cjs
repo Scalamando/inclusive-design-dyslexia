@@ -7,15 +7,18 @@ module.exports = {
 		extend: {
 			colors: {
 				dark: {
-                    light: "#686ea1",
+					light: "#686ea1",
 					DEFAULT: "#3d3b6b",
 				},
 				light: "#f4e8df",
 				"accent-red": "#ef9c9d",
 				"accent-orange": "#f2b19b",
 			},
-            fontFamily: {
-                "title": "Merriweather Sans, sans-serif"
+			fontFamily: {
+				title: "Merriweather Sans, sans-serif",
+			},
+            screens: {
+                'xs': '480px'
             }
 		},
 	},
