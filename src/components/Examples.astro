@@ -3,5 +3,79 @@
 
 <div>
     <h2 id="examples">Beispielprojekte</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quia molestiae officiis non maxime omnis ducimus. Impedit aliquid enim et voluptatum, repellat, earum aut modi accusamus sapiente blanditiis ut voluptatem.</p>
+    <p class="mb-2">Weiterführende Informationen und Projekte zu Legasthenie.</p>
+    <ul role="list" class="list-grid flex flex-row">
+        <li class="flex flex-col list-card mr-2">
+            <h3>Dyslexie Alphabet <span>&darr;</span></h3>
+            <p class="text-justify pt-2 text-xs detailed">Der Designer Daniel Britton hat spezifisch auf Typografie das
+                Alphabet
+                und die
+                Schrift so
+                angepasst und
+                entworfen, dass Menschen die normal Lesen und Schreiben können ein Gefühl dafür bekommen, wie Menschen
+                mit Dyslexie lesen und die Schrift wahrnehmen. Die Basis für das Konzept bietet die Tatsache, dass 40%
+                der Schrift unleserlich gemacht wird.</p>
+            <img class="img w-2/3 rounded-md" src="https://danielbritton.info/wp-content/uploads/2019/07/DX_02.jpg"
+                alt="Picture of specific designed alphabet for dyslexia">
+        </li>
+        <li class="list-card mr-2">
+            <h3>Studie zu Schriften</h3>
+            <img class="img w-2/3 rounded-md" src="src/assets/example_pictures/paperHead.png" alt="">
+        </li>
+        <li class="list-card">
+            <h3>Studie zu Schriften</h3>
+            <img class="img w-2/3 rounded-md" src="src/assets/example_pictures/paperHead.png" alt="">
+        </li>
+    </ul>
+
 </div>
+
+<style>
+    h3,
+    ul p {
+        color: theme(colors.light);
+    }
+
+    .link-card-grid {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .list-card {
+        list-style: none;
+        display: flex;
+        padding: 0.15rem;
+        background-color: inherit;
+        /*background-image: var(--link-gradient);*/
+        background-size: 400%;
+        border-radius: 0.5rem;
+        background-position: 100%;
+        transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .list-card {
+        width: 100%;
+        text-decoration: none;
+        line-height: 1.4;
+        padding: 1em 1.3em;
+        border-radius: 0.35rem;
+        color: inherit;
+        /* color: var(--text-color); */
+        background-color: currentColor;
+        opacity: 0.8;
+    }
+
+    .list-card:is(:hover, :focus-within) {
+        background-position: 0;
+    }
+
+    .list-card:is(:hover, :focus-within) {
+        color: #4b4885;
+    }
+
+    .list-card:is(:hover, :focus-within) div {
+        transform: scale(1.01);
+    }
+</style>
