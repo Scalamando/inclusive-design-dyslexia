@@ -4,26 +4,87 @@ import Header from '../components/Header.astro';
 import UserGroup from '../components/UserGroup.astro';
 import DesignProcess from '../components/DesignProcess.astro';
 import Examples from '../components/Examples.astro';
+import FurtherReading from '../components/FurtherReading.astro';
 import Guidelines from '../components/Guidelines.vue'
 ---
 
 <Layout title="Dyslexie">
     <Header />
     <div class="py-12 px-2 md:px-4 mx-auto flex max-w-full w-max items-stretch">
-        <aside class="pr-12 hidden lg:block right-full">
-            <ul class="sticky flex flex-col gap-4 top-8">
-                <li><a href="#user-group">Zielgruppe</a></li>
-                <li><a href="#design-process">Designprozess</a></li>
-                <li><a href="#guidelines">Guidelines</a></li>
-                <li><a href="#examples">Beispielprojekte</a></li>
-            </ul>
+        <aside class="pr-12 hidden lg:block right-full w-[235px]">
+            <nav class="sticky top-8 font-title">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#user-group" class="aside-link">Zielgruppe</a></li>
+                    <li><a href="#design-process" class="aside-link">Designprozess</a></li>
+                    <li><a href="#guidelines" class="aside-link">Guidelines</a></li>
+                    <li><a href="#examples" class="aside-link">Beispielprojekte</a></li>
+                    <li><a href="#further-reading" class="aside-link">Weitere Literatur</a></li>
+                </ul>
+            </nav>
         </aside>
-        <main class="flex flex-col gap-8 max-w-[90ch] h-[3000px]">
+        <main class="flex flex-col gap-8">
             <UserGroup />
             <DesignProcess />
             <!--<Guidelindes client:load />-->
             <Guidelines client:load/>
             <Examples />
+            <FurtherReading />
         </main>
     </div>
+    <script>
+        const sections = document.querySelectorAll('main section');
+        const navEl = document.querySelector('aside nav');
+        navEl.setAttribute('data-active', 'user-group');
+
+        // Emphasize the most prominent visible section in the aside navbar
+        const observer = new IntersectionObserver((sections) => {
+            for (const sectionElement of sections) {
+                if (sectionElement.isIntersecting) {
+                    const sectionId = sectionElement.target.id.replace("-section", "");
+                    navEl.setAttribute('data-active', sectionId);
+                }
+            }
+        }, { rootMargin: "-20% 0px -75% 0px" }); // Use the upper part of the browsers viewport
+
+        for (const section of sections) {
+            observer.observe(section);
+        }
+    </script>
 </Layout>
+
+<style>
+    nav a {
+        @apply inline-block pb-0.5;
+    }
+
+    nav[data-active] a {
+        @apply opacity-80;
+    }
+
+    /*
+        Apply the active style based on the nav's `data-active` attribute.
+        Look at lines 39-46 for further context.
+
+        See `tailwind.config.cjs` for the `aside-link-active` class.
+    */
+
+    nav[data-active="user-group"] a[href="#user-group"] {
+        @apply aside-link-active;
+    }
+
+    nav[data-active="design-process"] a[href="#design-process"] {
+        @apply aside-link-active;
+    }
+
+    nav[data-active="guidelines"] a[href="#guidelines"] {
+        @apply aside-link-active;
+    }
+
+    nav[data-active="examples"] a[href="#examples"] {
+        @apply aside-link-active;
+    }
+
+    nav[data-active="further-reading"] a[href="#further-reading"] {
+        @apply aside-link-active;
+    }
+</style>

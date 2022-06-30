@@ -3,15 +3,43 @@
 @tailwind utilities;
 
 @layer base {
-  h2 {
-    @apply text-2xl font-semibold mb-4;
-  }
+	h2 {
+		@apply text-3xl font-bold mb-4;
+	}
+
+	h3 {
+		@apply mb-2 font-bold;
+	}
+
+	strong {
+		@apply font-semibold;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-title;
+	}
 }
+
 @layer components {
-  .guidelines {
-    @apply max-w-[60ch] leading-normal;
-  }
-  .doDont {
-    @apply max-w-[60ch] border border-4 m-2 p-2 leading-normal w-1/2 place-content-center flex items-center rounded-md;
-  }
+	.aside-link {
+		background: linear-gradient(
+			to right,
+			theme(colors.dark.DEFAULT),
+			theme(colors.dark.DEFAULT)
+		);
+		transition: background-size 0.5s ease, transform 0.5s ease;
+		@apply relative bg-[length:0_3px] bg-no-repeat bg-right-bottom;
+	}
+
+	.guidelines {
+		@apply max-w-[60ch] leading-normal;
+	}
+
+	.doDont {
+		@apply max-w-[60ch] border-4 m-2 p-2 leading-normal w-1/2 place-content-center flex items-center rounded-md;
+	}
 }
+

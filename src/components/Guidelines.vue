@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section id="guidelines-section" class="max-w-[90ch]">
     <h2 id="guidelines">Guidelines</h2>
     <p class="mb-3 guidelines">
       Diese Regeln berücksichtigen die Probleme von Menschen mit Legasthenie.
@@ -41,7 +41,7 @@
         ></Guideline>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

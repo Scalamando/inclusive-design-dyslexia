@@ -1,7 +1,95 @@
 ---
+import BulletPoint from "./UserGroup/BulletPoint.astro";
+import peopleSvg from "../assets/icons/people.svg";
+import pillsSvg from "../assets/icons/pills.svg";
+import brainSvg from "../assets/icons/brain.svg";
 ---
 
-<div>
-    <h2 id="user-group">Zielgruppe</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quia molestiae officiis non maxime omnis ducimus. Impedit aliquid enim et voluptatum, repellat, earum aut modi accusamus sapiente blanditiis ut voluptatem.</p>
-</div>
+<section id="user-group-section" class="max-w-[60ch]">
+    <h2 id="user-group" class="mb-12">Die Zielgruppe</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-[0.4fr_1.6fr] place-items-center gap-8 mb-8">
+        <!-- TODO: Alt-tag -->
+        <img src={peopleSvg} alt="" class="w-1/2 sm:w-full">
+        <div>
+            <h3 class="text-xl font-semibold mb-0.5">4-20&percnt; der Bevölkerung</h3>
+            <p>Dyslexie ist in der Bevölkerung weit verbreitet, wobei hohe Dunkelziffern vermutet werden. Die
+                Ausprägungen der Dyslexie sind hierbei extrem vielfältig. Es gibt kein einheitliches Symptombild.</p>
+        </div>
+        <!-- TODO: Alt-tag -->
+        <img src={pillsSvg} alt="" class="w-1/2 sm:w-full">
+        <div>
+            <h3 class="text-xl font-semibold mb-0.5">Nicht &bdquo;heilbar&ldquo;</h3>
+            <p>Personen mit Dyslexie wachsen aus den Symptomen nicht heraus. Die Betroffenen erarbeiten jedoch häufig
+                kreative Bewältigungs&shy;strategien. Außerdem können durch kleine Anpassungen im alltäglichen Umfeld
+                Erleichertungen für die Betroffenen geschaffen werden. </p>
+        </div>
+        <!-- TODO: Alt-tag -->
+        <img src={brainSvg} alt="" class="w-1/2 sm:w-full">
+        <div>
+            <h3 class="text-xl font-semibold mb-0.5">Voll intelligent</h3>
+            <p>Dyslexie wird nicht durch die Intelligenz beeinflusst. Die Symptome treten über alle verschiedenen
+                Intelligen&shy;zniveaus auf. Dyslexie allein hindert keine betroffene Person an dem Erreichen
+                akademischer
+                oder beruflicher Ziele. </p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-2">
+        <details class="bg-slate-200 p-2 rounded-md">
+            <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">💪 Stärken</summary>
+            <div class="flex flex-col gap-4 pt-2 pb-1">
+                <BulletPoint mark={1} title="Kreativität">
+                    Personen mit Dyslexie sind häufig kreativ, da sie durch die Einschränkungen in ihrem Alltag ‘outside
+                    of the box’ denken.
+                </BulletPoint>
+                <BulletPoint mark={2} title="Lernen">
+                    Betroffene müssen viel mehr Anstrengung in den Lese- und
+                    Schreiblern&shy;prozess investieren. Dadurch
+                    entwickeln sie ein besseres Durchhalte&shy;vermögen und kreative Strategien.
+                </BulletPoint>
+                <BulletPoint mark={3} title="Problemlösen">
+                    Durch die von Sprache geprägte Welt müssen Personen mit
+                    Dyslexie sehr früh Bewältigungs&shy;mechanismen
+                    entwickeln. Hierdurch wird der Problem&shy;löse&shy;prozess trainiert.
+                </BulletPoint>
+            </div>
+        </details>
+        <details class="bg-slate-200 p-2 rounded-md">
+            <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">⛔ Exklusionfaktoren
+            </summary>
+            <div class="flex flex-col gap-4 pt-2 pb-1">
+                <BulletPoint mark={1} title="Allgemein">
+                    Grundsätzlich haben Personen mit Dyslexie Probleme damit, die Bedeutung geschriebener Zeichen zu
+                    erfassen. Es fällt Betroffenen schwer, den Sinn von Wörtern und Sätzen zu erkennen.
+                </BulletPoint>
+                <BulletPoint mark={2} title="Lesen">
+                    Beim Lesen sind die häufigsten Probleme eine niedrige Lese&shy;geschwindigkeit und das Verlieren der
+                    Zeile im
+                    Text. Hinzu kommt, dass Wörter häufig vertauscht, ausgesetzt oder hinzugefügt werden.
+                </BulletPoint>
+                <BulletPoint mark={3} title="Schreiben">
+                    Beim Schreiben prägt sich Dyslexie durch eine hohe Fehleranzahl in Rechtschreibung und Grammatik
+                    aus.
+                    Insbesondere Buchstaben&shy;verdrehungen, Reihenfolgen&shy;fehler und Auslassungen spielen eine
+                    Rolle. Zudem
+                    haben
+                    Betroffene häufig unleserliche Handschriften.
+                </BulletPoint>
+            </div>
+        </details>
+    </div>
+</section>
+
+<style>
+    .chevron {
+        @apply relative;
+    }
+
+    .chevron::after {
+        content: url(src/assets/icons/chevron.svg);
+        @apply absolute right-4 inset-y-4 invert scale-125 transition-transform;
+    }
+
+    details[open] .chevron::after {
+        @apply rotate-180;
+    }
+</style>

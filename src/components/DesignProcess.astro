@@ -1,7 +1,39 @@
 ---
+import Card from "./DesignProcess/Card.astro";
+import managerSvg from '../assets/icons/manager.svg';
+import unknownSvg from '../assets/icons/unknown.svg';
+import varietySvg from '../assets/icons/variety.svg';
+import groupSvg from '../assets/icons/group.svg';
+import conflictSvg from '../assets/icons/conflict.svg';
+import nonaffectedSvg from '../assets/icons/nonaffected.svg';
 ---
 
-<div>
+<section id="design-process-section" class="max-w-[60ch]">
     <h2 id="design-process">Designprozess</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quia molestiae officiis non maxime omnis ducimus. Impedit aliquid enim et voluptatum, repellat, earum aut modi accusamus sapiente blanditiis ut voluptatem.</p>
-</div>
+    <h3>Herausforderungen</h3>
+    <p class="mb-6">Die Arbeit mit Menschen mit Dyslexie stellt Designer:innen vor neue Herausforderungen, welche im
+        menschzentrierten Gestaltungsprozess besonders beachtet werden müssen.</p>
+    <ul class="mb-6 grid grid-cols-1 xs:grid-cols-2 gap-4">
+        <!-- TODO: Alt-tags -->
+        <Card icon={{src: managerSvg, alt: "" }}>
+            Nutzende sind möglicherweise <strong>nicht die Käufer</strong> des Endprodukts
+        </Card>
+        <Card icon={{src: unknownSvg, alt: "" }}>
+            Nutzende haben <strong>spezielle</strong> und <strong>wenig bekannte</strong> Anforderungen
+        </Card>
+        <Card icon={{src: varietySvg, alt: "" }}>
+            Nutzende weisen eine viel <strong>größere Vielfalt</strong> an Nutzungs&shy;eigen&shy;schaften auf
+        </Card>
+        <Card icon={{src: groupSvg, alt: "" }}>
+            Nutzende sind schwer in einer <strong>repräsentativen Gruppe</strong> abzubilden
+        </Card>
+        <Card icon={{src: nonaffectedSvg, alt: "" }}>
+            Konflikte zwischen <strong>Zugänglichkeit und Gebrauchstauglichkeit</strong> für weniger betroffene Menschen
+        </Card>
+        <Card icon={{src: conflictSvg, alt: "" }}>
+            Konflikte zwischen der Zugänglichkeit für Menschen mit <strong>verschiedenen Ausprägungen
+                von Dyslexie</strong>
+        </Card>
+    </ul>
+    <h3>Hinweise</h3>
+</section>
