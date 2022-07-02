@@ -20,8 +20,8 @@
         <button
           v-for="tab in Tabs"
           :key="tab"
-          class="mr-1 px-2 text-xl focus:bg-dark focus:text-white focus:outline-none focus:border-none"
-          v-on:click="currentTab = tab.Guidelines"
+          class="mr-1 px-2 text-xl"
+          v-on:click="setFocus(tab)"
           v-bind:id="tab.name"
         >
           {{ tab.name }}
@@ -30,7 +30,7 @@
 
       <div class="bg-slate-200 py-6 w-full">
         <Guideline
-          v-for="Guide in currentTab"
+          v-for="Guide in currentTab.Guidelines"
           :key="Guide"
           :inst="Guide.inst"
           :title="Guide.title"
@@ -228,11 +228,16 @@ export default {
   components: {
     Guideline,
   },
+  methods: {
+    setFocus: function(tab) {
+      document.getElementById(this.currentTab.name).classList.remove('focusButton')
+      this.currentTab = tab;
+      document.getElementById(tab.name).classList.add('focusButton');
+    }
+  },
   mounted() {
-    document.getElementById("Text").focus({
-      preventScroll: true,
-    });
-    this.currentTab = this.Tabs[0].Guidelines;
+    document.getElementById("Text").classList.add('focusButton');
+    this.currentTab = this.Tabs[0];
   },
 };
 </script>
