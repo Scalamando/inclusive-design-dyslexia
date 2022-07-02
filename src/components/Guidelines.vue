@@ -73,10 +73,18 @@ export default {
             {
               title: "Zeichenabstand",
               inst: "Verwende einen Zeichenabstand von 35% der Schriftgröße.",
+              doo: "Diese Zeichen haben ausreichend Abstand!",
+              dont: "Diese Zeichen sind zu nah aneinander!",
+              doStyle: "  doDont border-accent-green tracking-[.25em]",
+              dontStyle: "  doDont border-accent-red tracking-[-.1em] ",
             },
             {
               title: "Wortabstand",
               inst: "Der Abstand zwischen Wörtern sollte mind. 3,5-mal größer sein als der Zeichenabstand.",
+              doo: "Diese Wörter haben ausreichend Abstand!",
+              dont: "Diese Wörter sind zu nah aneinander!",
+              doStyle: "  doDont border-accent-green wordspaceRight",
+              dontStyle: "  doDont border-accent-red wordspaceWrong",
             },
             {
               title: "Zeilenabstand",
