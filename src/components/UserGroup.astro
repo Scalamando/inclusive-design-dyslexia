@@ -3,6 +3,13 @@ import BulletPoint from "./UserGroup/BulletPoint.astro";
 import peopleSvg from "../assets/icons/people.svg";
 import pillsSvg from "../assets/icons/pills.svg";
 import brainSvg from "../assets/icons/brain.svg";
+import VideoCard from "./UserGroup/VideoCard.astro";
+import readingMaya from "../assets/videoThumbnails/readingMaya.jpg"
+import readingJade from "../assets/videoThumbnails/readingJade.jpg"
+import readingMerril from "../assets/videoThumbnails/readingMerril.jpg"
+import writingAidan from "../assets/videoThumbnails/writingAidan.jpg"
+import writingLucy from "../assets/videoThumbnails/writingLucy.jpg"
+import writingSam from "../assets/videoThumbnails/writingSam.jpg"
 ---
 
 <section id="user-group-section" class="max-w-[60ch]">
@@ -81,6 +88,19 @@ import brainSvg from "../assets/icons/brain.svg";
         </details>
     </div>
     <h3>Dyslexie verstehen</h3>
+    <p class="mb-2"> Dyslexie besitzt keine einheiltichen Symptome. Und kann sich auf vielfältige Art und Weise bei Betroffenen äußern.</p>
+    <p class="mb-2"> in den folgenden Videos sechs Menschen und ihren Umgang mit Dyslexie kennen.</p>
+    <ul class="mb-2 grid grid-cols-1 xs:grid-cols-2 gap-4">
+        <!-- TODO: Alt-tags -->
+        <VideoCard image={{src: readingMaya, alt: "ein Mädchen lächelt. Neben ihr Text: Reading challenges: Maya, 2nd grade" ,link:"https://www.youtube.com/watch?v=DRWfi7mlo0M"}} ></VideoCard>
+        <VideoCard image={{src: writingAidan, alt: "ein kleiner junge schaut in die Kamera. Neben ihm Text: Writing challenges: Aidan, 1st grade" ,link: "https://www.youtube.com/watch?v=PD-BhCE9cxA" }} ></VideoCard>
+        <VideoCard image={{src: readingMerril, alt: "ein Mädchen schmunzelt. Neben ihr Text: Reading Challenges: Merril, 5th grade" ,link:"https://www.youtube.com/watch?v=x0qKvmYQnjw" }} ></VideoCard>
+        <VideoCard image={{src: writingLucy, alt: "ein Mädchen schaut in die Kamera. Neben ihr Text: Writing Challenges: Lucy, 5th grade", link: "https://www.youtube.com/watch?v=C9MExB2sadM" }} ></VideoCard>
+        <VideoCard image={{src: readingJade, alt: "ein Mädchen lacht. Neben ihr Text: Reading Challenges: Jade, 8th Grade", link: "https://www.youtube.com/watch?v=dXg2oY6fC8w" }} ></VideoCard>
+        <VideoCard image={{src: writingSam, alt: "ein Junge. Neben ihm Text: Writing Challenges: Sam, 12 grade", link: "https://www.youtube.com/watch?v=_B3F1c3gnIw"}} ></VideoCard>
+    </ul>
+    <p class = "mb-6"> <a class ="underline "href= "https://www.understood.org/en/articles/through-your-childs-eyes?_sp=92a76110-2ecb-4c2f-a187-2c36cc6cd61f.1656770006455#Reading_challenges:_Videos_of_kids%C2%A0">
+    Weitere Videos findest du hier </a></p>
 </section>
 
 <style>

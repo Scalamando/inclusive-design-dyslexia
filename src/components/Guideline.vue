@@ -2,7 +2,7 @@
   <div class="w-full flex justify-center">
     <div class="w-11/12 my-3 bg-slate-200 border-2 border-dark rounded-md">
       <div class="w-full pl-1 py-1 mx-2">
-        <p class="text-xl font-semibold guidelines">{{ title }}</p>
+        <h4 class=" font-semibold guidelines mb-1">{{ title }}</h4>
         <p class="guidelines">{{ inst }}</p>
       </div>
       <div :class="containerClass">
