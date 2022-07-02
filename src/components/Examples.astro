@@ -1,7 +1,9 @@
 ---
+import fontsUsedInPaper from '../assets/example_pictures/fontsUserInPaper.png';
+import lrsBrosch from '../assets/example_pictures/lrsBrosch.png';
 ---
 
-<section id="examples-section" class="max-w-[90ch]">
+<section id="examples-section" class="max-w-[60ch]">
     <h2 id="examples">Beispielprojekte</h2>
     <p class="mb-2">Weiterführende Informationen und Projekte zu Legasthenie.</p>
     <ul role="list" class="list-grid flex flex-col">
@@ -20,13 +22,13 @@
                         40%
                         der Schrift unleserlich gemacht wird.
                     </p>
-                    <a class="m-auto ml-4 place-self-start rounded-md text-light more-button"
+                    <a class="m-4 place-self-start rounded-md text-light more-button"
                         href="https://danielbritton.info/dyslexia/">Mehr
                         <span> &rarr; </span></a>
                 </div>
-                <img class="mb-3 mr-3 w-4/12 rounded-md"
+                <img class="mb-3 mr-3 object-scale-down w-2/5 rounded-md"
                     src="https://danielbritton.info/wp-content/uploads/2019/07/DX_02.jpg"
-                    alt="Picture of specific designed alphabet for dyslexia">
+                    alt="Ein Alphabet spezifisch für Menschen mit Dyslexie entwickelt">
             </div>
         </li>
         <li class="bg-slate-200 flex flex-col list-card mb-5 rounded-lg">
@@ -39,6 +41,8 @@
                         die Schriftarten evaluiert, die eine sehr gute Leseleistung bei den Probanden hervorgerufen
                         haben.
                     </p>
+                    <img class="p-2 w-6/12 place-self-center rounded-md" src={fontsUsedInPaper}
+                        alt="Schriftarten, die in der Studie verwendet wurden">
                     <h4>Ergebnisse kurz Zusammengefasst</h4>
                     <p class="text-justify pt-2 text-sm detailed">
                         Schriftarten <b>haben Einfluss </b> auf die Lesbarkeit der Texte für Menschen mit Dyslexie.
@@ -56,8 +60,7 @@
                         href="http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf">Mehr
                         <span> &rarr; </span></a>
                 </div>
-                <img class="m-auto mr-3 w-4/12 rounded-md" src="src/assets/example_pictures/fontsUserInPaper.png"
-                    alt="Picture of fonts used in the paper">
+
             </div>
         </li>
         <li class="bg-slate-200 flex flex-col list-card mb-5 rounded-lg">
@@ -74,7 +77,7 @@
                         href="https://feo.schule.de/service/umgang-mit-lese-und-rechtschreibschwaeche/LRS-Brosch-Aug2012.pdf">Mehr
                         <span> &rarr; </span></a>
                 </div>
-                <img class="m-auto ml-5 mr-10 mb-5 w-2/12 rounded-md" src="src/assets/example_pictures/lrsBrosch.png"
+                <img class="m-auto ml-5 mr-10 mb-5 w-4/12 rounded-md" src={lrsBrosch}
                     alt="picture of brochure about dyslexia">
             </div>
         </li>
@@ -106,30 +109,4 @@
     .more-button:hover {
         background-color: theme(colors.dark.light);
     }
-
-    /*
-    .list-card {
-        list-style: none;
-        display: flex;
-        padding: 0.15rem;
-        background-color: inherit;
-
-    background-size: 400%;
-    border-radius: 0.5rem;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .list-card {
-        width: 100%;
-        text-decoration: none;
-        line-height: 1.4;
-        padding: 1em 1.3em;
-        border-radius: 0.35rem;
-        color: inherit;
-        background-color: currentColor;
-        opacity: 0.8;
-    }
-
-    */
 </style>
