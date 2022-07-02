@@ -63,3 +63,13 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.wordspaceWrong{
+  word-spacing: -4px;
+}
+.wordspaceRight{
+  word-spacing: 0.35em
+}
+</style>
