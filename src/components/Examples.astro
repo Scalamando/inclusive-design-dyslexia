@@ -6,12 +6,12 @@ import lrsBrosch from '../assets/example_pictures/lrsBrosch.png';
 <section id="examples-section" class="max-w-[60ch]">
     <h2 id="examples">Beispielprojekte</h2>
     <p class="mb-2">Weiterführende Informationen und Projekte zu Legasthenie.</p>
-    <ul role="list" class="list-grid flex flex-col">
-        <li class="bg-dark/10 flex flex-col list-card mb-5 rounded-lg">
+    <ul role="list" class="list-grid flex flex-col gap-4">
+        <li class="bg-dark/10 flex flex-col p-5 rounded-lg">
             <h3>Dyslexie Alphabet </h3>
-            <div class="flex flex-row">
-                <div class="flex flex-col">
-                    <p class=" text-justify pt-2 text-sm detailed">Der Designer Daniel Britton hat spezifisch auf
+            <div class="flex gap-4">
+                <div class="flex flex-col w-[60%]">
+                    <p class="pt-2 mb-4 text-sm detailed">Der Designer Daniel Britton hat spezifisch auf
                         Typografie
                         das
                         Alphabet und die Schrift so angepasst und
@@ -22,77 +22,68 @@ import lrsBrosch from '../assets/example_pictures/lrsBrosch.png';
                         40%
                         der Schrift unleserlich gemacht wird.
                     </p>
-                    <a class="m-4 place-self-start rounded-md text-light more-button"
-                        href="https://danielbritton.info/dyslexia/">Mehr
-                        <span> &rarr; </span></a>
+                    <a class="rounded-md text-light more-button w-max"
+                        href="https://danielbritton.info/dyslexia/">Mehr &rarr;</a>
                 </div>
-                <img class="mb-3 mr-3 object-scale-down w-2/5 rounded-md"
+                <img class="object-scale-down w-[40%] rounded-md"
                     src="https://danielbritton.info/wp-content/uploads/2019/07/DX_02.jpg"
                     alt="Ein Alphabet spezifisch für Menschen mit Dyslexie entwickelt">
             </div>
         </li>
-        <li class="bg-dark/10 flex flex-col list-card mb-5 rounded-lg">
+        <li class="bg-dark/10 flex flex-col p-5 rounded-lg">
             <h3>Studie zu Schriften</h3>
-            <div class="flex flex-row">
+            <div class="flex">
                 <div class="flex flex-col">
-                    <p class="text-justify pt-2 text-sm detailed">
+                    <p class="pt-2 text-sm detailed">
                         In einem Experiment mit 48 legasthenen Probanden, wurde die Leseleistung mithilfe
                         einer Eye-Tracking Messung für verschiedene Schriftarten durchgeführt. Dadurch wurden objektiv
                         die Schriftarten evaluiert, die eine sehr gute Leseleistung bei den Probanden hervorgerufen
                         haben.
                     </p>
-                    <img class="p-2 w-6/12 place-self-center rounded-md" src={fontsUsedInPaper}
+                    <img class="p-2 my-4 w-6/12 place-self-center rounded-md" src={fontsUsedInPaper}
                         alt="Schriftarten, die in der Studie verwendet wurden">
                     <h4>Ergebnisse kurz Zusammengefasst</h4>
-                    <p class="text-justify pt-2 text-sm detailed">
+                    <p class="pt-2 mb-4 text-sm detailed">
                         Schriftarten <b>haben Einfluss </b> auf die Lesbarkeit der Texte für Menschen mit Dyslexie.
                         Serifenlose und romanische Schriftarten haben kürzere Fixationszeiten zur Folge. Es wurde aber
                         keine signifikant kürzere Lesedauer beobachtet. Kursive Schriften haben immer
-                        <span style="color: #F66868">schlechtere</span> Lesezeiten. Die Schriftarten
-                        <span style="color: #68DBA7">Courier</span> und <span style="color: #68DBA7">Helvetica</span>
+                        <span class="text-red-700">schlechtere</span> Lesezeiten. Die Schriftarten
+                        <span class="text-green-700">Courier</span> und <span class="text-green-700">Helvetica</span>
                         hingegen haben besonders kurze Fixierungszeiten.
                         Es wurde beobachtet, dass die speziell für Menschen mit Dyslexie entwickelte Schriftart
                         <em>OpenDys</em> <b>keine</b> besondere Verbesserung und Bevorzugung hervorbrachte.
                         Dominierend und somit für Menschen mit Dyslexie als sinnvolle Schriftarten sind somit:
                         Helvetiva, CMU, Arial, Verdana und Times.
                     </p>
-                    <a class="m-4 place-self-start rounded-md text-light more-button"
+                    <a class="place-self-start rounded-md text-light more-button"
                         href="http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf">Mehr
                         <span> &rarr; </span></a>
                 </div>
 
             </div>
         </li>
-        <li class="bg-dark/10 flex flex-col list-card mb-5 rounded-lg">
+        <li class="bg-dark/10 flex flex-col p-5 rounded-lg">
             <h3>Spielerischer Ratgeber</h3>
-            <div class="flex flex-row">
-                <div class="flex flex-col">
-                    <p class=" text-justify pt-2 text-sm detailed">
+            <div class="flex gap-4">
+                <div class="flex flex-col w-2/3 justify-between">
+                    <p class="text-sm detailed mb-4">
                         Die Broschüre <b>LRS, Legasthenie & CO</b> ist ein Ratgeber für Eltern, Lehrkräfte und
                         Förderkräfte den Kindern mit Dyslexie im schriftsprachlichen Bereich
                         Unterstützung zu geben. Diese Kinder sollen nicht als krank, gestört oder behindert
                         stigmatisiert werden sondern es soll erleichtert werden ihnen zu Helfen und sie zu Unterstützen.
                     </p>
-                    <a class="m-auto ml-4 place-self-start rounded-md text-light more-button"
+                    <a class="place-self-start rounded-md text-light more-button"
                         href="https://feo.schule.de/service/umgang-mit-lese-und-rechtschreibschwaeche/LRS-Brosch-Aug2012.pdf">Mehr
                         <span> &rarr; </span></a>
                 </div>
-                <img class="m-auto ml-5 mr-10 mb-5 w-4/12 rounded-md" src={lrsBrosch}
-                    alt="picture of brochure about dyslexia">
+                <img class="rounded-md w-1/3" src={lrsBrosch}
+                    alt="picture of brochure about dyslexia" width="419" height="595">
             </div>
         </li>
     </ul>
 </section>
 
 <style>
-    h3,
-    h4,
-    ul p {
-        padding: 1.1rem;
-        padding-bottom: 0;
-        text-align: justify;
-    }
-
     .link-card-grid {
         display: grid;
         grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
