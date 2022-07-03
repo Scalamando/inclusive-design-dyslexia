@@ -6,6 +6,7 @@ import DesignProcess from '../components/DesignProcess.astro';
 import Examples from '../components/Examples.astro';
 import FurtherReading from '../components/FurtherReading.astro';
 import Guidelines from '../components/Guidelines.vue'
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Dyslexie">
@@ -29,8 +30,10 @@ import Guidelines from '../components/Guidelines.vue'
             <Guidelines client:load/>
             <Examples />
             <FurtherReading />
+            
         </main>
     </div>
+    <Footer />
     <script>
         const sections = document.querySelectorAll('main section');
         const navEl = document.querySelector('aside nav');
@@ -44,7 +47,7 @@ import Guidelines from '../components/Guidelines.vue'
                     navEl.setAttribute('data-active', sectionId);
                 }
             }
-        }, { rootMargin: "-20% 0px -75% 0px" }); // Use the upper part of the browsers viewport
+        }, { rootMargin: "-20% 0px -80% 0px" }); // Use the upper part of the browsers viewport
 
         for (const section of sections) {
             observer.observe(section);
