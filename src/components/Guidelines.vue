@@ -1,5 +1,5 @@
 <template>
-  <section id="guidelines-section" class="w-[90ch] max-w-[calc(100vw-1.75rem)]">
+  <section id="guidelines-section" class="mb-6 w-[90ch] max-w-[calc(100vw-1.75rem)]">
     <h2 id="guidelines">Guidelines</h2>
     <p class="mb-3 guidelines">
       Diese Regeln berücksichtigen die Probleme von Menschen mit Legasthenie.
@@ -7,7 +7,7 @@
       alle Leser*innen.
     </p>
     <p class="mb-3 guidelines">
-      Verwenden Sie zusätzlich zu diesen Regeln die Richtlinen der
+      Verwende jedoch zusätzlich zu diesen Regeln die Richtlinen der <br>
       <a
         class="underline"
         href="https://www.w3.org/WAI/standards-guidelines/wcag/"
@@ -24,7 +24,7 @@
           v-on:click="setFocus(tab)"
           v-bind:id="tab.name"
         >
-          {{ tab.name }}
+         <h3> {{ tab.name }} </h3>
         </button>
       </nav>
 
@@ -71,20 +71,12 @@ export default {
               dontStyle: "  doDont border-accent-red font-serif ",
             },
             {
-              title: "Zeichenabstand",
-              inst: "Verwende einen Zeichenabstand von 35% der Schriftgröße.",
-              doo: "Diese Zeichen haben ausreichend Abstand!",
-              dont: "Diese Zeichen sind zu nah aneinander!",
-              doStyle: "  doDont border-accent-green tracking-[.25em]",
-              dontStyle: "  doDont border-accent-red tracking-[-.1em] ",
-            },
-            {
-              title: "Wortabstand",
-              inst: "Der Abstand zwischen Wörtern sollte mind. 3,5-mal größer sein als der Zeichenabstand.",
-              doo: "Diese Wörter haben ausreichend Abstand!",
-              dont: "Diese Wörter sind zu nah aneinander!",
-              doStyle: "  doDont border-accent-green wordspaceRight",
-              dontStyle: "  doDont border-accent-red wordspaceWrong",
+              title: "Zeichen und Wortabstand",
+              inst: "Verwende einen Zeichenabstand von 35% der Schriftgröße. Der Abstand zwischen einzelnen Wörtern sollte mind. 3,5 mal größer sein als der Zeichenabstand.",
+              doo: "Die Zeichen und Wörter haben ausreichend Abstand!",
+              dont: "Zeichen und Wörter sind zu nah aneinander!",
+              doStyle: "  doDont border-accent-green tracking-[.1.5em] wordspaceRight",
+              dontStyle: "  doDont border-accent-red tracking-[-.1em] wordspaceWrong",
             },
             {
               title: "Zeilenabstand",
