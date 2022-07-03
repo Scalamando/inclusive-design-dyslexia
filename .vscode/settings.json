@@ -1,7 +1,7 @@
 {
-	"editor.rulers": [100],
-	"editor.wordWrapColumn": 100,
 	"[astro]": {
+		"editor.rulers": [120],
+		"editor.wordWrapColumn": 120,
 		"editor.defaultFormatter": "astro-build.astro-vscode"
 	},
 	"tailwindCSS.includeLanguages": {

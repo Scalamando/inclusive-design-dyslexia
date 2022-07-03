@@ -28,7 +28,7 @@
         </button>
       </nav>
 
-      <div class="bg-slate-200 py-6 w-full">
+      <div class="bg-dark/10 py-6 w-full">
         <Guideline
           v-for="Guide in currentTab.Guidelines"
           :key="Guide"
@@ -108,7 +108,7 @@ export default {
               inst: "Nutze einfarbige Hintergründe ohne Muster oder Bilder.",
               doo: "Dies ist ein einfarbiger Hintergrund.",
               dont: "Dies ist ein mehrfarbiger Hintergrund mit Muster.",
-              doStyle: " doDont border-accent-green bg-zinc-50",
+              doStyle: " doDont border-accent-green bg-light",
               dontStyle:
                 " doDont border-accent-red bg-gradient-to-r from-accent-red via-slate-600 to-blue-500",
             },
