@@ -1,12 +1,12 @@
 <template>
-  <section id="guidelines-section" class="mb-6 w-[90ch] max-w-[calc(100vw-1.75rem)]">
+  <section id="guidelines-section" class="mb-4 w-[90ch] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-3rem)] lg:max-w-[calc(100vw-235px-1.5rem)]">
     <h2 id="guidelines">Guidelines</h2>
     <p class="mb-3 guidelines">
       Diese Regeln berücksichtigen die Probleme von Menschen mit Legasthenie.
       Sie vereinfachen das Lesen u. Verstehen von geschriebenen Inhalten für
       alle Leser*innen.
     </p>
-    <p class="mb-3 guidelines">
+    <p class="mb-6 guidelines">
       Verwende jedoch zusätzlich zu diesen Regeln die Richtlinen der <br>
       <a
         class="underline"
@@ -15,16 +15,17 @@
       >
     </p>
 
-    <div id="GuidelinesContent">
-      <nav>
+    <div id="GuidelinesContent" class="rounded-lg overflow-hidden">
+      <nav class="bg-dark/20">
         <button
           v-for="tab in Tabs"
           :key="tab"
-          class="mr-1 px-2 text-xl"
-          v-on:click="setFocus(tab)"
-          v-bind:id="tab.name"
+          class="px-3 py-2.5 text-xl leading-none hover:bg-dark/20"
+          :class="{'focusButton': tab === currentTab}"
+          @click="setFocus(tab)"
+          :id="tab.name"
         >
-         <h3> {{ tab.name }} </h3>
+         <h3 class="mb-0"> {{ tab.name }} </h3>
         </button>
       </nav>
 
@@ -222,13 +223,10 @@ export default {
   },
   methods: {
     setFocus: function(tab) {
-      document.getElementById(this.currentTab.name).classList.remove('focusButton')
       this.currentTab = tab;
-      document.getElementById(tab.name).classList.add('focusButton');
     }
   },
   mounted() {
-    document.getElementById("Text").classList.add('focusButton');
     this.currentTab = this.Tabs[0];
   },
 };
