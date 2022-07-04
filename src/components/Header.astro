@@ -1,4 +1,6 @@
 ---
+import vidWebmSrc from "../assets/dyslexie.webm";
+import vidMp4Src from "../assets/dyslexie.mp4";
 ---
 
 <header class="bg-dark text-white">
@@ -14,13 +16,13 @@
                 Durch frühe Förderung kann die Beinträchtigung minimiert werden.
             </p>
             <a href="#user-group"
-                class="w-full md:w-auto justify-center px-6 py-4 bg-white rounded-md text-dark font-semibold inline-flex leading-none hover:bg-gray-100">
+                class="w-full md:w-auto justify-center px-6 py-4 bg-white rounded-md text-dark font-semibold inline-flex leading-none hover:bg-slate-200 hover:text-slate-900">
                 Erfahre mehr
             </a>
         </div>
-        <div class="w-full bg-slate-900 pb-[56.25%] relative">
-            <span
-                class="absolute inset-0 tracking-[0.3em] uppercase font-semibold text-2xl grid place-items-center">Video</span>
-        </div>
+        <video controls class="w-full bg-slate-900 border-slate-900 border-2 rounded block">
+            <source src={vidWebmSrc} type="video/webm">
+            <source src={vidMp4Src} type="video/mp4">
+        </video>
     </div>
 </header>
