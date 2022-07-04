@@ -16,14 +16,14 @@ import writingSam from "../assets/videoThumbnails/writingSam.jpg"
     <h2 id="user-group" class="mb-12">Die Zielgruppe</h2>
     <div class="grid grid-cols-1 sm:grid-cols-[0.4fr_1.6fr] place-items-center gap-8 mb-8">
         <!-- TODO: Alt-tag -->
-        <img src={peopleSvg} alt="" class="w-1/2 sm:w-full">
+        <img src={peopleSvg} alt="Illustrierte Erdhalbkugel mit Menschen darauf, von denen 20% rot markiert sind" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">4-20&percnt; der Bevölkerung</h3>
             <p>Dyslexie ist in der Bevölkerung weit verbreitet, wobei hohe Dunkelziffern vermutet werden. Die
                 Ausprägungen der Dyslexie sind hierbei extrem vielfältig. Es gibt kein einheitliches Symptombild.</p>
         </div>
         <!-- TODO: Alt-tag -->
-        <img src={pillsSvg} alt="" class="w-1/2 sm:w-full">
+        <img src={pillsSvg} alt="3 Pillen, wovon eine offen ist und Kugeln verliert" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">Nicht &bdquo;heilbar&ldquo;</h3>
             <p>Personen mit Dyslexie wachsen aus den Symptomen nicht heraus. Die Betroffenen erarbeiten jedoch häufig
@@ -31,7 +31,7 @@ import writingSam from "../assets/videoThumbnails/writingSam.jpg"
                 Erleichertungen für die Betroffenen geschaffen werden. </p>
         </div>
         <!-- TODO: Alt-tag -->
-        <img src={brainSvg} alt="" class="w-1/2 sm:w-full">
+        <img src={brainSvg} alt="Illustrierter offener Kopf, aus dem verschiedene, bunte Formen schießen" class="w-1/2 sm:w-full">
         <div>
             <h3 class="text-xl font-semibold mb-0.5">Voll intelligent</h3>
             <p>Dyslexie wird nicht durch die Intelligenz beeinflusst. Die Symptome treten über alle verschiedenen
@@ -41,11 +41,11 @@ import writingSam from "../assets/videoThumbnails/writingSam.jpg"
         </div>
     </div>
     <div class="flex flex-col gap-2 mb-8">
-        <details class="bg-dark/10 p-2 rounded-md">
+        <details class="bg-dark/10 p-2 rounded-md cursor-pointer">
             <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">
                 <h3 class="mb-0">💪 Stärken</h3>
             </summary>
-            <div class="flex flex-col gap-4 pt-2 pb-1">
+            <ol class="flex flex-col gap-4 pt-2 pb-1">
                 <BulletPoint mark={1} title="Kreativität">
                     Personen mit Dyslexie sind häufig kreativ, da sie durch die Einschränkungen in ihrem Alltag ‘outside
                     of the box’ denken.
@@ -60,13 +60,13 @@ import writingSam from "../assets/videoThumbnails/writingSam.jpg"
                     Dyslexie sehr früh Bewältigungs&shy;mechanismen
                     entwickeln. Hierdurch wird der Problem&shy;löse&shy;prozess trainiert.
                 </BulletPoint>
-            </div>
+            </ol>
         </details>
-        <details class="bg-dark/10 p-2 rounded-md">
+        <details class="bg-dark/10 p-2 rounded-md cursor-pointer">
             <summary class="p-4 rounded-sm bg-dark text-white font-semibold list-none chevron">
                 <h3 class="mb-0">⛔ Exklusionfaktoren</h3>
             </summary>
-            <div class="flex flex-col gap-4 pt-2 pb-1">
+            <ol class="flex flex-col gap-4 pt-2 pb-1">
                 <BulletPoint mark={1} title="Allgemein">
                     Grundsätzlich haben Personen mit Dyslexie Probleme damit, die Bedeutung geschriebener Zeichen zu
                     erfassen. Es fällt Betroffenen schwer, den Sinn von Wörtern und Sätzen zu erkennen.
@@ -84,23 +84,36 @@ import writingSam from "../assets/videoThumbnails/writingSam.jpg"
                     haben
                     Betroffene häufig unleserliche Handschriften.
                 </BulletPoint>
-            </div>
+            </ol>
         </details>
     </div>
     <h3>Dyslexie verstehen</h3>
-    <p class="mb-2"> Dyslexie besitzt keine einheiltichen Symptome. Und kann sich auf vielfältige Art und Weise bei Betroffenen äußern.</p>
+    <p class="mb-2"> Dyslexie besitzt keine einheiltichen Symptome. Und kann sich auf vielfältige Art und Weise bei
+        Betroffenen äußern.</p>
     <p class="mb-6"> Lerne in den folgenden Videos sechs Menschen und ihren Umgang mit Dyslexie kennen.</p>
     <ul class="mb-4 grid grid-cols-1 xs:grid-cols-2 gap-4">
         <!-- TODO: Alt-tags -->
-        <VideoCard image={{src: readingMaya, alt: "ein Mädchen lächelt. Neben ihr Text: Reading challenges: Maya, 2nd grade" ,link:"https://www.youtube.com/watch?v=DRWfi7mlo0M"}} ></VideoCard>
-        <VideoCard image={{src: writingAidan, alt: "ein kleiner junge schaut in die Kamera. Neben ihm Text: Writing challenges: Aidan, 1st grade" ,link: "https://www.youtube.com/watch?v=PD-BhCE9cxA" }} ></VideoCard>
-        <VideoCard image={{src: readingMerril, alt: "ein Mädchen schmunzelt. Neben ihr Text: Reading Challenges: Merril, 5th grade" ,link:"https://www.youtube.com/watch?v=x0qKvmYQnjw" }} ></VideoCard>
-        <VideoCard image={{src: writingLucy, alt: "ein Mädchen schaut in die Kamera. Neben ihr Text: Writing Challenges: Lucy, 5th grade", link: "https://www.youtube.com/watch?v=C9MExB2sadM" }} ></VideoCard>
-        <VideoCard image={{src: readingJade, alt: "ein Mädchen lacht. Neben ihr Text: Reading Challenges: Jade, 8th Grade", link: "https://www.youtube.com/watch?v=dXg2oY6fC8w" }} ></VideoCard>
-        <VideoCard image={{src: writingSam, alt: "ein Junge. Neben ihm Text: Writing Challenges: Sam, 12 grade", link: "https://www.youtube.com/watch?v=_B3F1c3gnIw"}} ></VideoCard>
+        <VideoCard image={{src: readingMaya,
+            alt: "Ein Mädchen lächelt. Neben ihr Text: Reading challenges: Maya, 2nd grade"
+            ,link:"https://www.youtube.com/watch?v=DRWfi7mlo0M"}}></VideoCard>
+        <VideoCard image={{src: writingAidan,
+            alt: "Ein kleiner junge schaut in die Kamera. Neben ihm Text: Writing challenges: Aidan, 1st grade"
+            ,link: "https://www.youtube.com/watch?v=PD-BhCE9cxA" }}></VideoCard>
+        <VideoCard image={{src: readingMerril,
+            alt: "Ein Mädchen schmunzelt. Neben ihr Text: Reading Challenges: Merril, 5th grade"
+            ,link:"https://www.youtube.com/watch?v=x0qKvmYQnjw" }}></VideoCard>
+        <VideoCard image={{src: writingLucy,
+            alt: "Ein Mädchen schaut in die Kamera. Neben ihr Text: Writing Challenges: Lucy, 5th grade" ,
+            link: "https://www.youtube.com/watch?v=C9MExB2sadM" }}></VideoCard>
+        <VideoCard image={{src: readingJade,
+            alt: "Ein Mädchen lacht. Neben ihr Text: Reading Challenges: Jade, 8th Grade" ,
+            link: "https://www.youtube.com/watch?v=dXg2oY6fC8w" }}></VideoCard>
+        <VideoCard image={{src: writingSam, alt: "ein Junge. Neben ihm Text: Writing Challenges: Sam, 12 grade" ,
+            link: "https://www.youtube.com/watch?v=_B3F1c3gnIw" }}></VideoCard>
     </ul>
-    <p class = "mb-6"> <a class ="underline "href= "https://www.understood.org/en/articles/through-your-childs-eyes?_sp=92a76110-2ecb-4c2f-a187-2c36cc6cd61f.1656770006455#Reading_challenges:_Videos_of_kids%C2%A0">
-    Weitere Videos findest du hier </a></p>
+    <p class="mb-6"> <a class="underline "
+            href="https://www.understood.org/en/articles/through-your-childs-eyes?_sp=92a76110-2ecb-4c2f-a187-2c36cc6cd61f.1656770006455#Reading_challenges:_Videos_of_kids%C2%A0">
+            Weitere Videos findest du hier </a></p>
 </section>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="guidelines-section" class="mb-4 w-[90ch] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-3rem)] lg:max-w-[calc(100vw-235px-1.5rem)]">
+  <section id="guidelines-section" class="mb-4 w-[90ch] max-w-[calc(100vw-1.75rem)] sm:max-w-[calc(100vw-3rem)] lg:max-w-[calc(100vw-var(--nav-width))]">
     <h2 id="guidelines">Guidelines</h2>
     <p class="mb-3 guidelines">
       Diese Regeln berücksichtigen die Probleme von Menschen mit Legasthenie.
