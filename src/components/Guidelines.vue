@@ -63,7 +63,7 @@ export default {
 							doo: "Schriftgröße von 20px",
 							dont: "Schriftgröße von 12px",
 							doStyle: "border-accent-green doDont",
-							dontStyle: "border-accent-red  doDont",
+							dontStyle: "border-accent-red  doDont text-s",
 						},
 						{
 							title: "Schriftart",
